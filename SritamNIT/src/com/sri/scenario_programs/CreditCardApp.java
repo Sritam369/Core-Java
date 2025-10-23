@@ -12,7 +12,7 @@ public class CreditCardApp {
 		int credit=Integer.parseInt(sc.nextLine());
 		Customer c1= new Customer(name,credit);
 		System.out.println(CardsOnOffer.getOfferedCard(c1));
-sc.close();
+		sc.close();
 	}
 
 }
