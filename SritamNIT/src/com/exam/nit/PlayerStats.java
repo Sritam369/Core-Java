@@ -61,12 +61,20 @@ public void setOut(int out) {
 	this.out = out;
 }
 
-public double average() {
-	return this.runs/this.out;
+public String average() {
+   // return ballsFaced == 0 ? "Infinity" : String.format("%.2f", (double) runs / out);
+    if(ballsFaced==0 && out==0 ) {
+    	return "infinity";
+    }
+    else {
+    	return String.format("%.2f", (double) runs / out);
+    }
+    
 }
 
+
 public double strikeRate() {
-	return this.runs/this.ballsFaced*100;
+    return ballsFaced == 0 ? 0 : Double.parseDouble(String.format("%.2f", (runs / ballsFaced) * 100));
 }
 
 public String performance() {
@@ -84,7 +92,7 @@ public String performance() {
 
 @Override
 public String toString() {
-	return "PlayerStats [playerName=" + playerName + ", runs=" + runs + ", ballsFaced=" + ballsFaced + ", innings="
+	return "PlayerStats [playerName=" + playerName + ", runs=" + runs + ", ballsFaced=" +(int) ballsFaced + ", innings="
 			+ innings + ", out=" + out + ", average="+average()+", strikeRate="+strikeRate()+", performance="+performance()+"]";
 }
 
