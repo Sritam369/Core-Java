@@ -3,16 +3,16 @@ package com.exam.nit;
 public class PlayerStats {
 private String playerName;
 private int runs;
-private double ballsFaced;
+private int ballsFaced;
 private int innings;
 private int out;
 
-public PlayerStats(String playerName, int runs, double ballsFaced, int innings, int out) {
+public PlayerStats(String playerName, int runs, int ballsFaced, int innings, int out) {
 	super();
 	if(runs>=0 && runs<=10000 || ballsFaced>=0 && ballsFaced<=10000 || innings>=1 && innings<=500 || out>=0 && out<= innings) {
 	this.playerName = playerName;
 	this.runs = runs;
-	this.ballsFaced = ballsFaced;
+	this.ballsFaced =ballsFaced;
 	this.innings = innings;
 	this.out = out;
 	}
@@ -37,7 +37,7 @@ public void setRuns(int runs) {
 	this.runs = runs;
 }
 
-public double getBallsFaced() {
+public int getBallsFaced() {
 	return ballsFaced;
 }
 
@@ -62,19 +62,17 @@ public void setOut(int out) {
 }
 
 public String average() {
-   // return ballsFaced == 0 ? "Infinity" : String.format("%.2f", (double) runs / out);
-    if(ballsFaced==0 && out==0 ) {
-    	return "infinity";
+    if (out == 0) {
+        return "Infinity";
     }
-    else {
-    	return String.format("%.2f", (double) runs / out);
-    }
-    
+    return String.format("%.2f", (double) runs / out);
 }
 
-
 public double strikeRate() {
-    return ballsFaced == 0 ? 0 : Double.parseDouble(String.format("%.2f", (runs / ballsFaced) * 100));
+    if (ballsFaced == 0) {
+        return 0.0;
+    }
+    return Double.parseDouble(String.format("%.2f", (double) runs /ballsFaced * 100));
 }
 
 public String performance() {
@@ -92,7 +90,7 @@ public String performance() {
 
 @Override
 public String toString() {
-	return "PlayerStats [playerName=" + playerName + ", runs=" + runs + ", ballsFaced=" +(int) ballsFaced + ", innings="
+	return "PlayerStats [playerName=" + playerName + ", runs=" + runs + ", ballsFaced=" + ballsFaced + ", innings="
 			+ innings + ", out=" + out + ", average="+average()+", strikeRate="+strikeRate()+", performance="+performance()+"]";
 }
 

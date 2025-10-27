@@ -11,7 +11,7 @@ public class Player {
 		System.out.println("enter runs");
 		int runs=Integer.parseInt(sc.nextLine());
 		System.out.println("enter balls");
-		double balls=Double.parseDouble(sc.nextLine());
+		int balls=Integer.parseInt(sc.nextLine());
 		
 		System.out.println("enter innings");
 		int innings=Integer.parseInt(sc.nextLine());

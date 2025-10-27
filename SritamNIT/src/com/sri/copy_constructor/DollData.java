@@ -14,6 +14,9 @@ class Doll{
 		this.name=doll.name;
 		this.height=	doll.height;	
 	}
+	public void setDoll(String name) {
+		this.name=name;
+	}
 
 	@Override
 	public String toString() {
@@ -29,7 +32,9 @@ public class DollData {
 		
 		Doll d1=new Doll("pari",2.5);
 		Doll d2=new Doll(d1);
+		d2.setDoll("vvv");
 		System.out.println(d2);
+		System.out.println(d1);
 
 	}
 
