@@ -1,4 +1,4 @@
-package com.sri.pass_by_value;
+package com.sri.object_passing;
 
 public class Trainer {
 private int trainerId;

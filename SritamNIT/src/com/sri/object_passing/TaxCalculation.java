@@ -1,4 +1,4 @@
-package com.sri.pass_by_value;
+package com.sri.object_passing;
 
 import java.util.Scanner;
 
@@ -32,9 +32,8 @@ public class TaxCalculation {
 		double mda=Double.parseDouble(sc.nextLine());
 		System.out.println("enter manager project");
 		double mpro=Double.parseDouble(sc.nextLine());
-		Manager m = new Manager(mid,mname,mbasic,mhra,mda,mpro);
-		TaxUtil tax2 = new TaxUtil();
-		System.out.println("manager tax "+tax2.calculateTax(m));
+		Manager m = new Manager(mid,mname,mbasic,mhra,mda,mpro);	
+		System.out.println("manager tax "+tax.calculateTax(m));
 		
 		System.out.println("enter trainer name");
 		String tname=sc.nextLine();
@@ -50,9 +49,8 @@ public class TaxCalculation {
 		int tbatchc=Integer.parseInt(sc.nextLine());
 		System.out.println("enter trainer perk");
 		double tperk=Double.parseDouble(sc.nextLine());
-		Trainer t = new Trainer(tid,tname,tbasic,thra,tda,tbatchc,tperk);
-		TaxUtil tax3 = new TaxUtil();
-		System.out.println("trainer tax "+tax3.calculateTax(t));
+		Trainer t = new Trainer(tid,tname,tbasic,thra,tda,tbatchc,tperk);		
+		System.out.println("trainer tax "+tax.calculateTax(t));
 		
 		System.out.println("enter source name");
 		String sname=sc.nextLine();
@@ -70,9 +68,8 @@ public class TaxCalculation {
 		int senrollr=Integer.parseInt(sc.nextLine());
 		System.out.println("enter source perk");
 		double sperk=Double.parseDouble(sc.nextLine());
-		Sourcing s = new Sourcing(sid,sname,sbasic,shra,sda,senroll,senrollr,sperk);
-		TaxUtil tax4 = new TaxUtil();
-		System.out.println("sourcing tax "+tax4.calculateTax(s));
+		Sourcing s = new Sourcing(sid,sname,sbasic,shra,sda,senroll,senrollr,sperk);		
+		System.out.println("sourcing tax "+tax.calculateTax(s));
         sc.close();
 	}
 
