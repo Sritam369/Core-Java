@@ -10,14 +10,14 @@ public class EvenOddSeparator {
 		int e=0,o=0,x=0,y=0;
 		for(int i=0;i<arr.length;i++)
 		{
-//			if(arr[i]%2==0)
-//				e++;
-//			else
-//				o++;
+			if(arr[i]%2==0)
+				e++;
+			else
+				o++;
 		}
 		
-		int even[]=new int[arr.length];// [0,2]
-		int odd[]=new int[arr.length]; // [1,0,0]
+		int even[]=new int[e];// [0,2]
+		int odd[]=new int[o]; // [1,0,0]
 		for(int i=0;i<arr.length;i++) //[1,2,3,4,5]
 		{
 			if(arr[i]%2==0)
@@ -40,6 +40,7 @@ public class EvenOddSeparator {
 			arr[i] = sc.nextInt();
 		}
 		EvenOddSeparator.evenOrOdd(arr);
+		sc.close();
 	}
 
 }

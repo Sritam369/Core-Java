@@ -35,6 +35,7 @@ public static void middle(int brr[]) {
 			 arr[i]=sc.nextInt();
 		 }
 		 MiddleElements.middle(arr);
+		 sc.close();
 	}
 
 }

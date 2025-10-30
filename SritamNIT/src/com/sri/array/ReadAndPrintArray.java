@@ -3,7 +3,7 @@ package com.sri.array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthScrollPaneUI;
+
 
 public class ReadAndPrintArray {
 
