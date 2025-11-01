@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class FirstLastSum {
 
 	public static void sum(int brr[]) {
+		int last=brr.length-1;
 		for(int i=0;i<brr.length;i++) {
 			
 		}
-		System.out.println(brr[0]+brr.length);
+		System.out.println(brr[0]+last);
 	}
 	
 	public static void main(String[] args) {
