@@ -3,11 +3,12 @@ package com.sri.copy_constructor;
 class Doll{
 	private String name;
 	private double height;
-	
+	private static int x;
 	public Doll(String name, double height) {
 		
 		this.name = name;
 		this.height = height;
+		
 	}
 	
 	public Doll(Doll doll) {
