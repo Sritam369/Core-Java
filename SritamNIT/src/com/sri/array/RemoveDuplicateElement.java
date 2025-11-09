@@ -1,6 +1,6 @@
 package com.sri.array;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class RemoveDuplicateElement {
@@ -30,6 +30,7 @@ public static void remove(int arr[]) {
 			   arr[i] = sc.nextInt();
 		   }
 		   remove(arr);
+		   sc.close();
 	}
 
 }

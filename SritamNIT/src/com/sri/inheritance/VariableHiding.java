@@ -11,8 +11,6 @@ class Developer extends Employee{
 	}
 }
 
-
-
 public class VariableHiding {
 
 	public static void main(String[] args) {
