@@ -59,6 +59,7 @@ public class ZooManagement {
 		System.out.println("choose the type of object to create");
 		System.out.println("1.Animal.\n"+"2.Mammal\n"+"3.Dog");
 		int num = Integer.parseInt(sc.next());
+		
 		if(num==1) {
 			System.out.println("enter name");
 			String name = sc.next();
@@ -66,7 +67,8 @@ public class ZooManagement {
 			System.out.println("Animal [getName= "+a.getName()+"]");
 			System.exit(0);
 		}
-		if(num==2) {
+		
+		else if(num==2) {
 			System.out.println("enter name");
 			String name = sc.next();
 			System.out.println("enter if mamal has fur or not");
@@ -75,6 +77,7 @@ public class ZooManagement {
 			System.out.println("Mamal[ getName= "+m.getName()+", isHasFur= "+m.isHasFur()+"]");
 			System.exit(0);
 		}
+		
 		else {
 		System.out.println("enter name");
 		String name = sc.next();
