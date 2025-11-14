@@ -84,7 +84,6 @@ public class StudentFeeHierarchial {
 			Dayscholar d =new Dayscholar(id,name,fee,hfee);
 			System.out.println(d);
 			
-			
 			if(d.payFee(amount)==amount) {
 				System.out.println("all fees are cleared");
 			}
@@ -104,7 +103,9 @@ public class StudentFeeHierarchial {
 				System.out.println("remaining fees are "+(h.payFee(amount)-amount));
 				
 			}
+			sc.close();
 		}
+		
 		}
 
 	}
