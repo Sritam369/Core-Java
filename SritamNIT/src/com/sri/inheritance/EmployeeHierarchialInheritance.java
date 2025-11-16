@@ -43,8 +43,9 @@ class PermanentEmployee2 extends Employee2{
 		return "PermanentEmployee [empId=" + empId + ", empName=" + empName
 				+ ", empSalary=" + empSalary + ", providentFund=" + providentFund + " ]";
 	}
-	public void netSalary() {
+	public double netSalary() {
 		double net = super.empSalary+this.providentFund;
+		return net;
 	}
 }
 class ConteractEmployee extends Employee2{
@@ -75,6 +76,7 @@ public class EmployeeHierarchialInheritance {
 		double sal2 = Double.parseDouble(sc.nextLine());
 		PermanentEmployee2 pe = new PermanentEmployee2(id2,name2,sal2);
 		System.out.println(pe);
+		System.out.println("net salary: "+pe.netSalary());
 		
 		System.out.println("enter id");
 		int id = Integer.parseInt(sc.nextLine());

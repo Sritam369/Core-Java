@@ -22,20 +22,17 @@ class Dayscholar extends Students{
 		this.transport = transport;
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		return "Dayscholar [transportfee=" + transport + ", id=" + id + ", name=" + name + ", examfee=" + fee + "]";
 	}
-
-
 
 	public double payFee(double amount) {
 		double total = fee+transport;
 		return total;
 	}
 }
+
 class Hosteller extends Students{
 	protected double hostel;
 
@@ -44,19 +41,16 @@ class Hosteller extends Students{
 		this.hostel = hostel;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "Hosteller [hostelfee=" + hostel + ", id=" + id + ", name=" + name + ", examfee=" + fee + "]";
 	}
-
 
 	public double payFee(double amount) {
 		double total = fee+hostel;
 		return total;
 	}
 }
-
 
 public class StudentFeeHierarchial {
 
