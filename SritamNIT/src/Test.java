@@ -1,26 +1,22 @@
 
-public class Test 
+public class Test  
 {
-
-    static final int X;
-    static final int Y;
+	static int y ;
 
     static 
     {
-        X = 5;
+        System.out.println("Static block: y = " + y);
+        y = 20;
     }
 
-    static
-    {
-        Y = 10;
-    }
+    
 
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
-        System.out.println("X = " + X);
-        System.out.println("Y = " + Y);
+        System.out.println("Main: y = " + y);
     }
 }
+
 
 
 
