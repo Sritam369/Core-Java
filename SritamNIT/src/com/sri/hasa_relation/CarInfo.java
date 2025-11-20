@@ -17,12 +17,12 @@ class Engine {
   
 }
 
-class Car{
+class Cars{
 	private String make;
 	private String model2;
 	private int year; 	
 	private final Engine engine;
-	public Car(String make, String model2, int year,String model, int engineCapacity ) {
+	public Cars(String make, String model2, int year,String model, int engineCapacity ) {
 		super();
 		this.make = make;
 		this.model2 = model2;
@@ -48,7 +48,7 @@ public class CarInfo{
 		String model2 = sc.nextLine();
 		System.out.println("enter year");
 		int year = Integer.parseInt(sc.nextLine());
-		Car c = new Car(make,model2,year,model,cap);
+		Cars c = new Cars(make,model2,year,model,cap);
 		System.out.println(c);
 		sc.close();
 	}
