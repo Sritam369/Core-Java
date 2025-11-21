@@ -17,7 +17,6 @@ public static void sortArray(int brr[]) {
 	}
 }
 	
-	
 	public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	System.out.println("enter size");

@@ -17,8 +17,7 @@ public class CountDigit {
 			int n=arr[i];
 			int c=0;
 			for(int j=n;j!=0;j/=10) {
-				c++;
-				
+				c++;			
 			}
 			System.out.println(arr[i]+"="+c);
 		}
