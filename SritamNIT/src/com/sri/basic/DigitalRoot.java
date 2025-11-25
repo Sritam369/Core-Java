@@ -19,7 +19,7 @@ public class DigitalRoot {
 
             num = sum;  
         }
-
+        
         System.out.println("Digital Root = " + num);
         sc.close();
     }
