@@ -19,12 +19,11 @@ public class VariableHidingWhileUpcasting {
 	public static void main(String[] args) {
 		RBI r = new SBI();
 		System.out.println(r.loan());
-		System.out.println(((SBI)r).ifscCode);
+		SBI s = (SBI)r;
+		System.out.println(s.ifscCode);
 		System.out.println(r.ifscCode);
 		
-		SBI s = new SBI();
-		System.out.println(s.ifscCode);
-		System.out.println(s.loan());
+
 		
 	}
 
