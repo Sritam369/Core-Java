@@ -2,12 +2,18 @@ package com.sri.method_overriding;
 
 class RBI{
 	protected String ifscCode="RbiHyd0014";
+	protected static String name="sritam";
+	public static String name() {
+		return name;
+	}
 	public String loan() {
 		return "provide loan to customer.";
 	}
 }
 class SBI extends RBI{
 	protected String ifscCode="SbiHyd0014";
+	protected static String name="sritam";
+	
 	public String loan() {
 	
 		return "provide loan to customer with 9.2% interest.";
@@ -18,6 +24,7 @@ public class VariableHidingWhileUpcasting {
 
 	public static void main(String[] args) {
 		RBI r = new SBI();
+		System.out.println(r.ifscCode);
 		System.out.println(r.loan());
 		SBI s = (SBI)r;
 		System.out.println(s.ifscCode);

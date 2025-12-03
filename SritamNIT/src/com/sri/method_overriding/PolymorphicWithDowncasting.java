@@ -16,12 +16,14 @@ class Dog2 extends Animal2 {
 	}
 }
 class Lion1 extends Animal2 {
+	@Override
 	public void sleep() {
 		System.out.println("lion is sleeping");
 	}
 	public void roar() {
 		System.out.println("lion is roaring");
 	}
+	
 }
 
 public class PolymorphicWithDowncasting {
@@ -37,7 +39,7 @@ public static void main(String[] args) {
 	
 	public static void executeAnimal(Animal2 animal) {
 		animal.sleep();
-		Dog2 dog =(Dog2)animal;
+		Dog2 dog =(Dog2)animal; // classcastexception for lion class
 		dog.bark();
 		
 	}

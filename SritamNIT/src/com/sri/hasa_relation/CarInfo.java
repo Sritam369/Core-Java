@@ -48,6 +48,7 @@ public class CarInfo{
 		String model2 = sc.nextLine();
 		System.out.println("enter year");
 		int year = Integer.parseInt(sc.nextLine());
+		
 		Cars c = new Cars(make,model2,year,model,cap);
 		System.out.println(c);
 		sc.close();

@@ -5,7 +5,7 @@ class Vehicle{
 		return 80;
 	}
 	public void printCapacity() {
-		System.out.println(this.tankCapacity());
+		System.out.println(tankCapacity());
 	}
 }
 class Car extends Vehicle{

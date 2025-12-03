@@ -23,7 +23,6 @@ public class AnimalMultiLevel {
 	dog.bark();
 	dog.eat();
 	dog.walk();
-
 	}
 
 }

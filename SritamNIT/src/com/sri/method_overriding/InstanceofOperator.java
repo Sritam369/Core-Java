@@ -34,7 +34,9 @@ public static void main(String[] args) {
 	}
 	
 	public static void executeAnimal(Animal3 animal) {
-		if(animal instanceof Dog3 ) {
+		
+		if(animal instanceof Dog3 ) 
+		{
 			Dog3 dog = (Dog3)animal;
 			dog.sleep();
 			dog.bark();
