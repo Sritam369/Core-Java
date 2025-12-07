@@ -1,5 +1,3 @@
-
-
 class Alpha{
 	
 }
@@ -8,6 +6,7 @@ class Beta extends Alpha{
 }
 
 class Animal{
+	
 	public Alpha accept() {
 		return null;
 	}
