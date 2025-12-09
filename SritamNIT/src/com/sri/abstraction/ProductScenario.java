@@ -101,7 +101,8 @@ public class ProductScenario {
 		System.out.println("select product type");
 		System.out.println("1.digital product");
 		System.out.println("2.physical product");
-		
+		System.out.println("3.to exit");
+		while(true) {
 		System.out.println("enter a number");
 		int choice = Integer.parseInt(sc.nextLine());		
 		if(choice==1) {
@@ -138,12 +139,20 @@ public class ProductScenario {
 			System.out.println(p);
 			p.applyDiscount(percentage);
 			System.out.println("Tax RS : "+p.calculateTax());
+			PysicalProduct ph = (PysicalProduct)p;
+			System.out.println("shipping cost : "+ph.calculateShippingCost());
+		}
+		else if(choice==3) {
+			System.out.println("you exited");
+			System.exit(0);
 		}
 		else {
 			System.out.println("invalid input");
 			System.exit(0);
 		}
-		sc.close();
+		
+		}
+		
 		
 	}
 
