@@ -3,6 +3,7 @@ package com.sri.interface_programs;
 interface HotDrink{
 	void prepare();
 }
+
 class Tea implements HotDrink{
 	public void prepare() {
 		System.out.println("preparing tea");
@@ -20,7 +21,7 @@ class Horlicks implements HotDrink{
 }
 
 class Restaurant{
-	public static void acceptObject(HotDrink hd) {
+	public static void acceptObject(HotDrink hd) { // loose coupling
 		hd.prepare();
 	}
 }
@@ -28,7 +29,7 @@ class Restaurant{
 public class LooseCoupling {
 
 	public static void main(String[] args) {
-		Restaurant.acceptObject(new Tea());
+		Restaurant.acceptObject(new Tea());		
 		Restaurant.acceptObject(new Coffee());
 		Restaurant.acceptObject(new Horlicks());
 

@@ -9,9 +9,10 @@ abstract class Car{
 	public void getCarDetails() {
 		System.out.println("it has 4 wheels");
 	}
-	public abstract void run();
+	public abstract void run(); // partial abstraction
 }
 class Honda extends Car{	
+	
 	public void run() {
 		System.out.println("honda car is running");
 	}
