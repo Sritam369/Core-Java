@@ -5,23 +5,19 @@ interface Printer{
 }
 class PrinterDemo{
 	public Printer getPrinter() {
-		Printer p = new Printer() {
+		return new Printer() {		
 			public void print() {
-				System.out.println("overriding print method");
+				System.out.println("overriden print method");
 			}
 		};
-		p.print();
-		return p;		
-	}
-	
+	}	
 }
-
 
 public class InterfaceImplementationByUsingAnonymous {
 
 	public static void main(String[] args) {
 		PrinterDemo p2 = new PrinterDemo();
-		p2.getPrinter();
+		p2.getPrinter().print();
 
 	}
 
