@@ -6,8 +6,7 @@ sealed interface Moveable {
 }
 
 non-sealed class Car implements Moveable{ // sub class must write final / non-sealed/sealed
-	public void move() {
-		
+	public void move() {		
 		System.out.println("car speed is : "+SPEED);
 	}
 }

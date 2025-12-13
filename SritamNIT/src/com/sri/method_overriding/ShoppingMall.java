@@ -114,7 +114,7 @@ public class ShoppingMall {
         	generateBill(c,price);
         }
         else {
-         	c = new VIPCustomer(name);
+        c = new VIPCustomer(name);
         	generateBill(c,price);
         }
 	}

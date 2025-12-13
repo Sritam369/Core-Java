@@ -11,8 +11,7 @@ interface Calculate{
 class Myclass implements Calculate{
 	static double doSum(int x, int y) {
 		System.out.println("class static method");
-		return x+y;
-		
+		return x+y;		
 	} 
 }
 
