@@ -1,4 +1,4 @@
-package com.sri.lamda_expression;
+package com.sri.consumer_functional_interface;
 
 import java.util.Scanner;
 import java.util.function.Consumer;
