@@ -6,9 +6,8 @@ record Student(Integer id,String name,String course) {}
 
 public class StudentNotification {
 
-	public static void main(String[] args) {
-		
-        
+	void main() {
+		     
         int size = Integer.parseInt(IO.readln("Enter number of students : "));
         Student s[] = new Student[size];
         Consumer<Student> message = wel -> IO.println("Hello "+wel.name()+"! Welcome to the "+wel.course()+" course.");
