@@ -3,7 +3,7 @@ package com.sri.copy_constructor;
 class Doll{
 	private String name;
 	private double height;
-	private static int x;
+	
 	public Doll(String name, double height) {
 		
 		this.name = name;
@@ -34,7 +34,7 @@ public class DollData {
 		Doll d1=new Doll("pari",2.5);
 		Doll d2=new Doll(d1);
 		d2.setDoll("vvv");
-		System.out.println(d2);
+		IO.println(d2);
 		System.out.println(d1);
 
 	}
