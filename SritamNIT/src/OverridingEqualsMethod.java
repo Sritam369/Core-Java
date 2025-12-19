@@ -1,46 +1,37 @@
-
-class Employee{
-	private int id;
-	private String name;
-	public Employee(int id, String name) {
+class Product{
+	private int productId;
+	private String productName;
+	public Product(int productId, String productName) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.productId = productId;
+		this.productName = productName;
 	}
-	public boolean equals(Object obj) { 
-		// retrieve the first object value
-		
-		int id1 = this.id; // e1.id
-		String name1 = this.name; //e1.name
-		
-		// retrieve the second object data
-		Employee e2 = (Employee)obj;
-		int id2 = e2.id;
-		String name2 = e2.name;
-		
-		if(id1==id2 && name1.equals(name2)) {
+	
+	public boolean equals(Object obj) { // object obj = new product()
+		if(obj instanceof Product) {
+		Product p = (Product) obj;
+		if(this.productId==p.productId && this.productName==p.productName) {
 			return true;
 		}
 		else {
 			return false;
 		}
+		}
+		else {
+			IO.println("please compare two same class objects");
+			return false;
+		}
 	}
 	public int hashCode() {
-		return this.id;
+		return this.productId;
 	}
 }
-
-public class OverridingEqualsMethod {
-
-	public static void main(String[] args) {
-		Employee e1 = new Employee(111,"sritam1");
-		Employee e2 = new Employee(111,"sritam2");
-		
-		System.out.println(e1.equals(e2));
-		System.out.println(e1.hashCode());
-		System.out.println(e2.hashCode());
-		
-		
+public class OverridingEqualsMethod{
+	void main() {
+		Product p1 = new Product(111,"sritam");
+		Product p2 = new Product(111,"sritam");
+		IO.println(p1.equals(p2));
+		IO.println(p1.hashCode());
+		IO.println(p2.hashCode());
 	}
-
 }
