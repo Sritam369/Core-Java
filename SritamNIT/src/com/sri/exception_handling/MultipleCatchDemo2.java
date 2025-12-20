@@ -1,7 +1,5 @@
 package com.sri.exception_handling;
 
-import java.util.InputMismatchException;
-
 public class MultipleCatchDemo2 {
     void main() {
 	try {
@@ -18,7 +16,7 @@ public class MultipleCatchDemo2 {
 	 }
 }
     void raiseException() {
-    	String str = null;
+    	String str = "null";
     IO.println(str.length()); // from here the exception is propagating to the caller method
 		 
     Object obj[]=new Integer[3];
