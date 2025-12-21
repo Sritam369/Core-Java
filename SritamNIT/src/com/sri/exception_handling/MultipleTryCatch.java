@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MultipleTryCatch {
  void main() {
 	 try {
-		 String str = null;
+		 String str = "null";
 		 IO.println(str.length());
 	 }
 	 catch(NullPointerException n){
