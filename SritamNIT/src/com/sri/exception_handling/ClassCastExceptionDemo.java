@@ -9,20 +9,28 @@ public class ClassCastExceptionDemo {
 	   int size = Integer.parseInt(IO.readln("Enter size"));
 	   Object arr[]= new Object[size];
 	   for(int i=0;i<size;i++) {
-		   String x = IO.readln("enter value");
+		  String x = IO.readln("enter value");	   
 		   if(x.equals("123")) {
-			   arr[i]=Integer.parseInt(x);
+			   arr[i] =Integer.parseInt(x);			   		   
 		   }
+		   else if(x.equals("true") || x.equals("false")) {
+			   arr[i]=Boolean.parseBoolean(x);
+		   }
+		   else {
 		   arr[i]=x;
+		   }
 	   }
+
 	   for(Object arrs:arr) {
-		   IO.println("Casting successful: "+arrs);
+		   String x = (String)arrs;
+		   IO.println("Casting successful: "+x);
 	   }
-	   
+		   
 	   }
 	   catch(ClassCastException e) {
 		   e.printStackTrace();
 	   }
+	   
 	   
    }
 }

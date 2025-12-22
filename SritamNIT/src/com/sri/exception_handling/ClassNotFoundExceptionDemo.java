@@ -6,12 +6,14 @@ public class ClassNotFoundExceptionDemo {
 	 public ClassNotFoundExceptionDemo() {
 	        System.out.println("Default constructor called.");
 	    }
-
+    
 	public ClassNotFoundExceptionDemo(String x) {
+		
 		try {
 		Class.forName(x);
 		IO.println("Class loaded successfully");
 		}
+		
 		catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}

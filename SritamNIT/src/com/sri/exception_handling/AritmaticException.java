@@ -16,5 +16,6 @@ public class AritmaticException {
 		   IO.println("ArithmeticException caught: division by zero: dividend="+dividend+", divisor="+divisor+" ");
 		   return 0;
 	   }
+	   
    }
 }
