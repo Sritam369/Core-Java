@@ -50,7 +50,7 @@ class CarTest {
 			IO.println("car not punctured");
 		}
 		}
-		public static void carHeat(int x) throws CarHeatException{
+		public static void carHeat(int x) throws CarHeatException{			
 			if(x>50) {
 				
 					throw new CarHeatException("car is heated more than 50 degree celsius");

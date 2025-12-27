@@ -10,7 +10,7 @@ public class ClassCastExceptionDemo {
 	   Object arr[]= new Object[size];
 	   for(int i=0;i<size;i++) {
 		  String x = IO.readln("enter value");	   
-		   if(x.equals("123")) {
+		   if(x.matches("\\d+")) {
 			   arr[i] =Integer.parseInt(x);			   		   
 		   }
 		   else if(x.equals("true") || x.equals("false")) {
