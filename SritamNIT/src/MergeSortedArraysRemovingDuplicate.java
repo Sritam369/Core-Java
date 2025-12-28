@@ -36,6 +36,7 @@ public class MergeSortedArraysRemovingDuplicate {
 		
 		}
 		System.out.print("]");
+		
 	}
 
 }
