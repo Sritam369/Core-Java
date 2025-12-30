@@ -1,4 +1,3 @@
-
 class Product2{
 	private int id;
 	private String name;
@@ -29,9 +28,8 @@ class Product2{
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", price=" + price + "]";
-	}
-	
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}	
 }
 
 public class ProductSearchingInArray {
@@ -41,7 +39,7 @@ public class ProductSearchingInArray {
 	   IO.println("Enter number for product: "+size);
 	   int c=1;
 	   for(int i=0;i<size;i++) {
-		   IO.println("Enter details for product: "+c); 
+		   IO.println("Enter details for product "+c+" :"); 
 		   int id = Integer.parseInt(IO.readln("enter id"));
 		   String name = IO.readln("enter name");
 		   double price = Double.parseDouble(IO.readln("enter price"));
@@ -51,9 +49,15 @@ public class ProductSearchingInArray {
 	   }
 	   int pId = Integer.parseInt(IO.readln("enter product id to search"));
 	   
+	   boolean isFound=false;
 	   for(Product2 brr:arr) {
-		   if(brr.getId()==pId)
-		   IO.println(brr);
+		   if(brr.getId()==pId) {
+		   IO.println("Product Found: "+brr);
+		   isFound=true;
+		   }		   
+	   }
+	   if(!isFound) {
+		   IO.println("Product with ID "+pId+" not found.");
 	   }
   }
 }
