@@ -7,7 +7,6 @@ public class TryWithMultipleResources {
    void main()  {
 	   FileResources fr = new FileResources();
 	   DatabaseResources dr = new DatabaseResources();
-	  	   
 	   try(fr;dr){
 		   IO.println(10/0);
 	   }
