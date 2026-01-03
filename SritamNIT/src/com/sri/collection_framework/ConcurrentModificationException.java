@@ -18,6 +18,13 @@ class IPLAuction{
 		listOfPlayers.add(players);
 	}
 	public void retainOrRelease() {
+		for(player list:listOfPlayers) {
+			if(list.basePrice()==5000) {
+				listOfPlayers.remove(list);
+				break;
+			}
+		}// will only remove one object.Without break it'll give concurrentmodificationexception.
+		
 		Iterator<player>itr=listOfPlayers.iterator();
 		while(itr.hasNext()) {
 			player player=itr.next();
@@ -35,7 +42,7 @@ public class ConcurrentModificationException {
   void main() {
 	  IPLAuction ipl = new IPLAuction("rcb");
 	  ipl.add(new player(111,"virat",6000d));
-	  ipl.add(new player(222,"bhuvi",4000d));
+	  ipl.add(new player(222,"bhuvi",5000d));
 	  ipl.add(new player(333,"abd",5000d));
 	  ipl.retainOrRelease();
 	  ipl.display();
