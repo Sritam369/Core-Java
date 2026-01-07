@@ -13,29 +13,30 @@ class Library{
 		v.forEach(IO::println);
 	}
 	public void issueBook(Vector<Book>v , int find) {
-		
+		boolean isFound=false;
 		Iterator<Book>itr = v.iterator();
 		while(itr.hasNext()) {
 			Book b = itr.next();			
 		if(b.id()==find) {
 			itr.remove();
+			isFound=true;
 		}
-		else {
-			IO.println("Book with id "+find+" not found.");
-			break;
 		}
+		if(!isFound) {
+			IO.println("Book with id "+find+" not found");
 		}
 	}
 	public void searchBook(Vector<Book>v , String find) {
+		boolean isFound=false;
 		for(Book books:v) {
 			if(books.title().equalsIgnoreCase(find) || books.author().equalsIgnoreCase(find)) {
 				IO.println(books);
+				isFound=true;
 				break;
-			}
-			else {
-				IO.println("No matching books found.");
-				break;
-			}
+			}			
+		}
+		if(isFound==false) {
+			IO.println("Matching book not found.");
 		}
 	}
 }
