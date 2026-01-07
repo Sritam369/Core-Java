@@ -2,7 +2,7 @@ package com.sri.inner_class;
 
 class Outer4{
 	private static int x = 100;
-	class Inner{
+	 class Inner{
 		public static void m() {	
 			System.out.println("outer x : "+x);
 		}
@@ -11,7 +11,7 @@ class Outer4{
 public class StaticMethodInsideInnerClass {
 
 	public static void main(String[] args) {
-		Outer4.Inner.m();
+		 Outer4.Inner.m();
 
 	}
 

@@ -2,7 +2,7 @@ package com.sri.inner_class;
 
 class Outer3{
 	private int x = 100;
-	class Inner{
+	 class Inner{
 		int x = 200;
 		public void m() {
 			System.out.println("inner x : "+this.x);
