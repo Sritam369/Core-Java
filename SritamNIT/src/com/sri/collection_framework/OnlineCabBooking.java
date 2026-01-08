@@ -95,7 +95,7 @@ public class OnlineCabBooking {
 	  String pick = IO.readln("enter pick up point");
 	  String drop = IO.readln("enter drop point");
 	  int distance = Integer.parseInt(IO.readln("enter customer distance"));
-	  String phone = IO.readln("enter phone number");
+	  String phone = IO.readln("enter customer phone number");
 	  
 	  c = new Customers(id,name,pick,drop,distance,phone);
 	  
