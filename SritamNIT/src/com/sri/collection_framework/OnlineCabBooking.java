@@ -47,10 +47,8 @@ class CustomerService{
           if (cust.phone().equals(c.phone())) {
               return false;
           }
-		}
-		
+		}		
 		return true;
-
 	}
 	
 	public double calculateBill(Customers cust) {
