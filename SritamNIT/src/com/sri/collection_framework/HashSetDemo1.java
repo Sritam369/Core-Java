@@ -11,6 +11,6 @@ public class HashSetDemo1 {
 	 hs.add(new String("java"));
 	 IO.println(hs);
 	 hs.remove(12);
-	 IO.println("a"+hs);
+	 IO.println(hs);
  }
 }
