@@ -31,7 +31,7 @@ public class CustomerComparator {
 		  }
 		  
 		  IO.println("sorting the array based on bill");
-		  Arrays.sort(c,(c1,c2)-> Double.compare(c1.bill(),c2.bill()));
+		  Arrays.sort(c,(c1,c2)-> Double.compare(c2.bill(),c1.bill()));
 		  for(Customer customer: c) {
 			  IO.println(customer);
 		  }
