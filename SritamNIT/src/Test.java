@@ -1,16 +1,21 @@
-import java.util.ArrayList;
-import java.util.ListIterator;
-
-public class Test {
-	public static void main(String[] args) {
-		ArrayList al = new ArrayList<>();
-		al.add(50);
-		al.add(25);
-		ListIterator li = al.listIterator();
-		while(li.hasNext())
-			System.out.println(li.next());
-		al.add(22);
-		System.out.println(li.hasNext());
-	}
+import java.util.*;
+public class Test 
+{
+       public static void main(String args[]) 
+       {
+            HashSet set = new HashSet();
+            String s1 = "abc";
+            String s2 = "def";
+            String s3 = "";
+            set.add(s1);
+            set.add(s2);
+            set.add(s1);
+            set.add(s2);
+            Iterator i = set.iterator();
+            while(i.hasNext())
+            {
+                 s3 += (String) i.next();
+            }
+            System.out.println(s3);
+       }
 }
-
