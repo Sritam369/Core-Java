@@ -17,6 +17,7 @@ class Student{
 		return "Student [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
 }
+
 class Science extends Student{
 	protected int phy;
 	protected int chem;
@@ -30,6 +31,7 @@ class Science extends Student{
 		return super.toString()+"Science [phy=" + phy + ", chem=" + chem + "]";
 	}	
 }
+
 class PCM extends Science{
 	protected int math;
 

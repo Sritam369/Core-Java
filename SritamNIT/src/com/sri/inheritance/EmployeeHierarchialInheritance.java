@@ -32,6 +32,7 @@ class Employee2{
 		}
 	}
 }
+
 class PermanentEmployee2 extends Employee2{
 	protected double providentFund=super.empSalary*12/100;
 
@@ -48,6 +49,7 @@ class PermanentEmployee2 extends Employee2{
 		return net;
 	}
 }
+
 class ConteractEmployee extends Employee2{
 	protected int contractDuration;
 

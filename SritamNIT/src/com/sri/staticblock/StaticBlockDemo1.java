@@ -1,7 +1,7 @@
 package com.sri.staticblock;
 
 class Test{
-	static int x;
+	 static int x;
 	static
 	{
 		 x=100;
@@ -16,7 +16,7 @@ class Test{
 	{
 		 x=300;
 		System.out.println("x value is: "+x);
-	}
+	}	
 }
 
 public class StaticBlockDemo1 {

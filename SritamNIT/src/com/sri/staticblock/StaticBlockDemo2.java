@@ -12,7 +12,7 @@ class Demo{
 	}
 }
 
-public class StsticBlockDemo2 {
+public class StaticBlockDemo2 {
 
 	public static void main(String[] args) {
 		System.out.println("x value: "+Demo.x);

@@ -18,6 +18,7 @@ class Animal{
 		this.name = name;
 	}
 }
+
 class Mamal extends Animal{
 	private boolean hasFur;
 
@@ -34,6 +35,7 @@ class Mamal extends Animal{
 		this.hasFur = hasFur;
 	}
 }
+
 class Dog extends Mamal{
 	private String breed;
 	public Dog(String name,boolean hasFur,String breed) {

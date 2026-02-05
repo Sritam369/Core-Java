@@ -17,7 +17,7 @@ public static void check(int arr[],int brr[]) {
 			System.out.println("not equal");
 		}
 		else {
-			System.out.println(" equal");
+			System.out.println("equal");
 		}
 	}
 	

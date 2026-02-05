@@ -7,6 +7,7 @@ class A{
 	{
 		System.out.println("b");
 	}
+	
 	A(){
 		System.out.println("c");
 	}
@@ -18,6 +19,7 @@ class B extends A{
 	{
 		System.out.println("e");
 	}
+	
 	B(){
 		System.out.println("f");
 	}
