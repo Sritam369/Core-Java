@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class PriorityQueueDemo3 {
- void main() {
+	public static void main(String[] args) {
 	 PriorityQueue<Integer> p = new PriorityQueue<>();
 	 int choice;
 	 

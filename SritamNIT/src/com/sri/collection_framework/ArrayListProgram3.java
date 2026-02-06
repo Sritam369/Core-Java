@@ -3,7 +3,7 @@ package com.sri.collection_framework;
 import java.util.ArrayList;
 
 public class ArrayListProgram3 {
-  void main() {
+  public static void main(String[] args) {
 	  ArrayList<String> al1 = new ArrayList<>();
 	  al1.add("sritam");
 	  al1.add("subrat");

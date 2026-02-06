@@ -4,7 +4,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class TreeMapDemo4 {
-  void main() {
+	public static void main(String[] args) {
 	  SortedMap<Integer,String> map = new TreeMap<>();
 	  map.put(100, "amit");
 	  map.put(101, "ravi");

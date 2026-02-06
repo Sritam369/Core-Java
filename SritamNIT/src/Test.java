@@ -1,21 +1,11 @@
-import java.util.*;
-public class Test 
-{
-       public static void main(String args[]) 
-       {
-            HashSet set = new HashSet();
-            String s1 = "abc";
-            String s2 = "def";
-            String s3 = "";
-            set.add(s1);
-            set.add(s2);
-            set.add(s1);
-            set.add(s2);
-            Iterator i = set.iterator();
-            while(i.hasNext())
-            {
-                 s3 += (String) i.next();
-            }
-            System.out.println(s3);
-       }
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Test {
+	void main() {
+		List<Integer> list = List.of(54,34,234,23,364,3);
+		list.stream().map(k -> k-k+2).filter(k -> k!=0).map(k -> 100)
+		.forEach(k -> System.out.print(k - 10 + " "));
+	}
 }

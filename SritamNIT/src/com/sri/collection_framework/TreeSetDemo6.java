@@ -5,7 +5,7 @@ import java.util.TreeSet;
 // StringBuffer and StringBuilder both implement Comparable from 11v
 
 public class TreeSetDemo6 {
-   void main() {
+	public static void main(String[] args) {
 	   TreeSet<StringBuffer> set = new TreeSet<>((s1,s2)-> s2.compareTo(s1));
 	   set.add(new StringBuffer("B"));
 	   set.add(new StringBuffer("A"));

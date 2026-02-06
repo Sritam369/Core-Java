@@ -1,5 +1,6 @@
 package com.sri.collection_framework;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 record ProductWithTreeSet1(Integer pid, String pname)  {
@@ -17,7 +18,7 @@ record ProductWithTreeSet1(Integer pid, String pname)  {
 }
 
 public class ProductWithTreeSet{
-	void main() {
+	public static void main(String[] args) {
 		TreeSet<ProductWithTreeSet1> set = new TreeSet<>((p1,p2)-> Integer.compare(p1.pid(), p2.pid()));
 		set.add(new ProductWithTreeSet1(103,"mobile"));
 		set.add(new ProductWithTreeSet1(102,"laptop"));
