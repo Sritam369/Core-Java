@@ -1,7 +1,7 @@
 package com.sri.array;
 
 public class CommonElementInTwoArrays {
-  void main() {
+  public static void main(String[] args) {
 	  int arr1[]= {1,3,4,7,9,10};
 	  int arr2[]= {2,3,7,6,9,12};
 	  for(int i=0;i<arr1.length;i++) {

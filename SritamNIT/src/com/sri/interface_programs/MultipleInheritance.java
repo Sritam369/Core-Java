@@ -9,6 +9,7 @@ interface Beta {
 class Implementer implements Alpha,Beta{
 	
 	public void m1() {
+		
 		System.out.println("mi is possible");
 	}
 }

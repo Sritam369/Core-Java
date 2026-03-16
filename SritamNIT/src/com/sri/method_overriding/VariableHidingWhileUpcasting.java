@@ -15,7 +15,6 @@ class SBI extends RBI{
 	protected static String name="sritam";
 	
 	public String loan() {
-	
 		return "provide loan to customer with 9.2% interest.";
 	}
 }

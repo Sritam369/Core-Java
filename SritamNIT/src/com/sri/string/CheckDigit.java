@@ -16,7 +16,7 @@ public class CheckDigit {
 			}
 		}
        if(hasDigit==true) {
-    	   System.out.println("it has digit");
+    	   IO.println("it has digit");
        }
        else {
     	   System.out.println("it doesn't have any digit");

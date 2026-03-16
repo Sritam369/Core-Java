@@ -1,12 +1,13 @@
 package com.sri.interface_programs;
 
-sealed interface Moveable {
+sealed interface Moveable  {
 	int SPEED = 100; // by default public static final
 	void move();
 }
 
 non-sealed class Car implements Moveable{ // sub class must write final / non-sealed/sealed
-	public void move() {		
+	
+	public void move() {			
 		System.out.println("car speed is : "+SPEED);
 	}
 }

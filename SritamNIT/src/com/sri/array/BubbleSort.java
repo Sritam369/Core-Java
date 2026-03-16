@@ -23,7 +23,7 @@ public class BubbleSort {
 		int arr[] = {7,1,2,5,3,6,4};
 		System.out.println("Before Sort : "+Arrays.toString(arr));
 		BubbleSort.sortArray(arr);
-		System.out.println("After sort :"+Arrays.toString(arr));
+		IO.println("After sort :"+Arrays.toString(arr));
 
 
 	}

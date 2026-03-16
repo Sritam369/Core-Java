@@ -5,6 +5,7 @@ import java.util.Scanner;
 class Engine {
   private String model;
   private int engineCapacity;
+  
   public Engine(String model, int engineCapacity) {
 	super();
 	this.model = model;

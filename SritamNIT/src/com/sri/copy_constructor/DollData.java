@@ -13,7 +13,7 @@ class Doll{
 	
 	public Doll(Doll doll) {
 		this.name=doll.name;
-		this.height=	doll.height;	
+		this.height=doll.height;	
 	}
 	public void setDoll(String name) {
 		this.name=name;

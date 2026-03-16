@@ -4,17 +4,17 @@ class Test{
 	 static int x;
 	static
 	{
-		 x=100;
+		x=100;
 		System.out.println("x value is: "+x);
 	}
 	static
 	{
-		 x=200;
+		x=200;
 		System.out.println("x value is: "+x);
 	}
 	static
 	{
-		 x=300;
+		x=300;
 		System.out.println("x value is: "+x);
 	}	
 }

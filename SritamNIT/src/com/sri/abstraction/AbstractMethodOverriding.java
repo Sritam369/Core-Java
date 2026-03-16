@@ -5,6 +5,7 @@ abstract class Alpha{
 	public abstract void demo();
 }
 abstract class Beta extends Alpha{
+	
 	public void show() {
 		System.out.println("show method is overriden in beta class");
 	}

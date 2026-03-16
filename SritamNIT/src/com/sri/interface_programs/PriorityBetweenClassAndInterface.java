@@ -9,7 +9,7 @@ interface X{
 	}
 }
 class Y{
-	int x = 200;
+    int x = 200;
 	public void show() {
 		System.out.println("concrete method");
 	}
@@ -17,7 +17,7 @@ class Y{
 class Z extends Y implements X{
 	int x = 300; // variable hiding otherwise ambiguity issue between X interface variable and Y class variable
 	public void display() {
-		System.out.println(x);
+		System.out.println(X.x);
 	}
 }
 
