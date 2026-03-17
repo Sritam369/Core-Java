@@ -1,6 +1,7 @@
 package com.sri.stream_api84;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.OptionalDouble;
@@ -163,6 +164,93 @@ public class EmployeeAdder {
 	   
 	   map2.forEach((k,v)->IO.println(k+" "+v));
 	   IO.println("===============================");
+	 //15. Find employees with a specific age 35
+	   list.stream().filter(e->e.getAge()==35).forEach(IO::println); 
+	   IO.println("===============================");
+	  //16. calculate the sum of salaries based on gender
+	   list.stream().collect(Collectors.groupingBy(e->e.getGender())).forEach((k,v)->{
+		   double sum2=0;
+		   for(Employee value:v) {
+			   sum2+=value.getSalary();
+		   }
+		   IO.println("sum of salary of "+k+" :"+sum2);
+	   });
+	                 //(OR)
+	   list.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.summingDouble(Employee::getSalary))).
+	   forEach((k,v)->IO.println(k+" "+v));	   
+	   IO.println("===============================");
+	 //17. Find employees whose name starts with j
+	   list.stream().filter(e->e.getName().startsWith("E")).forEach(IO::println); 
+	   IO.println("===============================");
+	  //18. Calculate average salary for male and female
+	   list.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary))).forEach((k,v)->IO.println(k+" "+v));
+	   IO.println("===============================");
+	  //19. Find top 5 highest paid employees
+	   list.stream().sorted((e1,e2)->Double.compare(e2.getSalary(), e1.getSalary())).limit(5).forEach(IO::println);
+	   IO.println("===============================");
+	  //20. Retrieve distinct age values
+	   List<Employee>list2 = list.stream().filter(e->e.getAge()==27).toList();
+	   list2.forEach(IO::println);
+	   IO.println("===============================");
+	  //21. Find the 3 lowest paid employee names
+	   list.stream().sorted((e1,e2)->Double.compare(e1.getSalary(), e2.getSalary())).limit(3).map(e->e.getName()).forEach(IO::println);
+	   IO.println("===============================");
+	  //22. Sort employees by name length
+	   list.stream().sorted((e1,e2)->Integer.compare(e1.getName().length(), e2.getName().length())).forEach(IO::println);
+	   IO.println("===============================");
+	  //23. Group employees by age
+	    Map<String,List<Employee>> map3 = list.stream().collect(Collectors.groupingBy(e->{
+		   int age = e.getAge();
+		   if(age>=20 && age<=30) {
+			   return "20-30";
+		   }
+		   else if(age>=31 && age<=40) {
+			   return "30-40";
+		   }
+		   else {
+			   return "40+";
+		   }
+	   }));
+	    IO.println("===============================");
+	  //24. Find avg salary of employess with age<=30
+	    double avg2 =list.stream().filter(e->e.getAge()<=30).mapToDouble(e->e.getSalary()).average().orElse(0.0);
+	    IO.println(avg2);
+	    IO.println("===============================");
+	  //25. Find name of male employees with salary over 55000
+	    list.stream().filter(e->e.getGender().equalsIgnoreCase("male") && e.getSalary()>55000).map(e->e.getName()).forEach(IO::println);
+	    IO.println("===============================");
+	  //26. Find the youngest female employees
+	    list.stream().filter(e->e.getGender().equalsIgnoreCase("female")).sorted((e1,e2)->Double.compare(e1.getAge(), e2.getAge())).limit(1).forEach(IO::println);
+	    IO.println("===============================");
+	  //27. Retrieve the names of employees in reverse order
+	    List<String> collect = list.stream().map(e->e.getName()).collect(Collectors.toList());
+	    Collections.reverse(collect);
+	    IO.println(collect);
+	    IO.println("===============================");
+	  //28. Find highest salary among females
+	    list.stream().filter(e->e.getGender().equalsIgnoreCase("female")).sorted((e1,e2)->Double.compare(e2.getSalary(), e1.getSalary())).limit(1).forEach(IO::println);
+	    IO.println("===============================");
+	  //29. Group employees by age and gender
+	    Map<String, Map<Integer, List<Employee>>> collect2 = list.stream()
+	    		.collect(Collectors.groupingBy(Employee::getGender,Collectors.groupingBy(Employee::getAge)));
+
+	    		collect2.forEach((key,value)->
+	    		{
+	    			IO.println(key+"-"+value);
+	    		});
+	    IO.println("===============================");
+	  //30. Find the Sum of Salaries for Employees with Names Containing "Bob"
+	    double sum2 = list.stream().filter(e->e.getName().equalsIgnoreCase("bob")).mapToDouble(e->e.getSalary()).sum();
+	    IO.println(sum2);
+	    IO.println("===============================");
+	  //31. Find the Names of Employees Aged 30-40 with Salaries Between 50,000 and 60,000:
+	    list.stream().filter(e->e.getSalary()>=50000 && e.getSalary()<=60000 && e.getAge()>=30 && e.getAge()<=40).forEach(IO::println);
+	    IO.println("===============================");
+	  //32. Calculate total no. of employees
+	    long count2 = list.stream().count();
+	    IO.println(count2);
+	    IO.println("===============================");
+	  
 	}
 
 }
