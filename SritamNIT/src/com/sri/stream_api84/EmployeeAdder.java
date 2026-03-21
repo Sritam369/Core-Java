@@ -335,7 +335,7 @@ public class EmployeeAdder {
 	  //46. Group Employees by Age and List Only Unique Salaries
 	    list.stream().collect(Collectors.groupingBy(e->e.getAge(),Collectors.mapping(Employee::getSalary, Collectors.toSet())))
 		.forEach((key,value)->System.out.println("Age : "+key +" Salary : "+value)); 
-	    IO.println("===============================");
+	    IO.println("===============================46");
 	  //47. Find employees with same salary
 	    list.stream().collect(Collectors.groupingBy(e->e.getSalary())).entrySet().stream().filter(e->e.getValue().size()>1).forEach(IO::println);
 	    IO.println("===============================");
@@ -367,6 +367,29 @@ public class EmployeeAdder {
 	    double sum3 = list.stream().filter(e->e.getAge()%2!=0).mapToDouble(e->e.getSalary()).sum();    
 	    IO.println(sum3);
 	    IO.println("===============================");
+	  //54. Group employees by their first letter of name
+	    Map<Character, List<Employee>> collect3 = list.stream().collect(Collectors.groupingBy(e->e.getName().charAt(0)));
+	    collect3.forEach((k,v)->IO.println(k+" "+v));
+	    IO.println("===============================");
+	  //55. Find the employee with shortest name
+	    Employee min = list.stream().min((e1,e2)->Integer.compare(e1.getName().length(), e2.getName().length())).get();
+	    IO.println(min);
+	    IO.println("===============================");
+	  //56. Calculate the average salary of employee whose name starts with e
+	    double avg3 = list.stream().filter(e->e.getName().startsWith("E")).mapToDouble(e->e.getSalary()).average().orElse(0);
+	    IO.println(avg3);
+	    IO.println("===============================");
+	  //57. Filter employees by age range b/w 25 and 35
+	    list.stream().filter(e->e.getAge()>25 && e.getAge()<35).forEach(IO::println);
+	    IO.println("===============================");
+	  //58. Group employees by the first 2 letters of their name
+	    Map<String,List<Employee>>map5 = list.stream().collect(Collectors.groupingBy(e->e.getName().substring(0, 2)));
+	    map5.forEach((k,v)->IO.println(k+" "+v));
+	    IO.println("===============================");
+	  //59. Group employees by the number of words in their names
+	    list.stream().collect(Collectors.groupingBy(e->e.getName().length())).forEach((k,v)->IO.println(k+" "+v));
+	    IO.println("===============================");
+	    
 	}
 
 }
