@@ -3,6 +3,7 @@ package com.sri.multithreading;
 class CustomThread extends Thread {
 	public void run() {
 		IO.println("Child thread is running");
+		IO.println("child thread is: "+Thread.currentThread().getName());
 	}
 }
 

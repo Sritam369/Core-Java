@@ -18,7 +18,7 @@ public class ThreadIdMethod {
 		MyThread mt = new MyThread();
 		mt.start();
 		try {
-			mt.sleep(1000);
+			mt.sleep(1000); // main thread will sleep here beacuse sleep() method works on currently executing thread regardless of which object we call it on.
 		}
 		catch(Exception e) {
 			e.printStackTrace();
