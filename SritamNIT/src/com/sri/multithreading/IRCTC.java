@@ -10,6 +10,7 @@ class Customer implements Runnable{
 	}
 	
 	public void run() {
+		
 		String name = null;
 		if(availableSeats>=wantedSeat) {
 			name = Thread.currentThread().getName();
@@ -20,6 +21,7 @@ class Customer implements Runnable{
 			name = Thread.currentThread().getName();
 			IO.println("Sorry!!! "+name+" seat is not available");
 		}
+		
 	}
 }
 public class IRCTC {
