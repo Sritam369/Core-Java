@@ -1,26 +1,33 @@
 package seg;
 
-public class Test {
+class Test {
     public static void main(String[] args) {
 
-        int n = 122334;
+        String s = "abcbaababaaabcba";
+        String sub = "";
 
-        for(int i = 0; i <= 9; i++) {
-            int count = 0;
-            int temp = n;
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i; j < s.length(); j++) {
 
-            while(temp != 0) {
-                int digit = temp % 10;
-                if(digit == i) {
-                    count++;
+                boolean flag = true;
+                int left = i;
+                int right = j;
+
+                while (left < right) {
+                    if (s.charAt(left) != s.charAt(right)) {
+                        flag = false;
+                        break;
+                    }
+                    left++;
+                    right--;
                 }
-                temp /= 10;
-            }
 
-            if(count > 0) {
-                System.out.println(i + " -> " + count);
+                if (flag==true && (j - i + 1) > sub.length()) {
+                    sub = s.substring(i, j + 1); 
+                }
             }
         }
+
+        System.out.println(sub);
     }
 }
-
