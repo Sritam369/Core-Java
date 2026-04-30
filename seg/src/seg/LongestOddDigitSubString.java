@@ -3,7 +3,7 @@ package seg;
 public class LongestOddDigitSubString {
 
 	void main() {
-		String s = "00123456";
+		String s = "001203456";
 		String s2 ="";
 		for(int i=s.length()-1;i>=0;i--) {
 			if((s.charAt(i)-'0')%2==1) {
